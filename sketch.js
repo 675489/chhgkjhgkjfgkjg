@@ -5,10 +5,8 @@ function preload(){
   //uncomment the code to add animation to ship 
 
   shipImg1 = loadAnimation("ship-1.png");
-  //shipImg1 = loadAnimation("ship-1.png");
-  //shipImg1 = loadAnimation("ship-1");
-  //shipImg1 = loadAnimation("ship-1.png","ship-2.png","ship-1.png","ship-2.png");
-  //shipImg1 = loadAnimation("ship-1","ship-2","ship-1","ship-2");
+  shipImg1 = loadAnimation("ship-1.png","ship-2.png","ship-1.png","ship-2.png");
+ 
   
   seaImg = loadImage("sea.png");
 }
@@ -17,11 +15,11 @@ function setup(){
   createCanvas(400,400);
   background("blue");
 
-  // Moving background
-  sea=createSprite(400,200);
-  sea.addImage(seaImg);
-  sea.velocityX = -5;
-  sea.scale=0.3;
+    // Moving background
+      sea=createSprite(400,200);
+      sea.addImage(seaImg);
+      sea.velocityX = -5;
+      sea.scale=0.3;
 
   
   ship = createSprite(130,200,30,30);
@@ -36,10 +34,10 @@ function draw() {
 
   //uncomment code to reset the background
   if(sea.x < 0){
-    sea.x = sea.width/8;
-    
+   sea.x = sea.width/8;
+  
   }
-     
+
  
   drawSprites();
 }
